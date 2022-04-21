@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "rvest.vs-code-prettier-eslint",
+    "pmneo.tsimporter",
+    "gruntfuggly.todo-tree",
+    "dbaeumer.vscode-eslint",
+    "irongeek.vscode-env",
+    "NomicFoundation.hardhat-solidity"
+  ]
+}

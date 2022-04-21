@@ -1,0 +1,43 @@
+{
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "./client/node_modules/typescript/lib",
+  // NOTE: see .vscode/extensions.json for installation installation of v4 beta
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "todo-tree.general.debug": true,
+  "todo-tree.general.tags": [
+    "BUG",
+    "NOTE",
+    "TODO",
+    "THINK",
+    "FUTURE",
+    "REMOVE",
+    "DOCUMENT"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "NOTE": {
+      "background": "white",
+      "foreground": "black"
+    },
+    "REMOVE": {
+      "background": "red",
+      "foreground": "white"
+    },
+    "BUG": {
+      "background": "maroon",
+      "foreground": "white"
+    },
+    "FUTURE": {
+      "background": "aqua",
+      "foreground": "black"
+    },
+    "THINK": {
+      "background": "yellow",
+      "foreground": "black"
+    },
+    "DOCUMENT": {
+      "background": "green",
+      "foreground": "white"
+    },
+  }
+}
