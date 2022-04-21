@@ -11,22 +11,26 @@
 
 ## usage
 
+### setup
+
+in `.vscode/` there are some recommended workspace extensions and settings. you can install those to get the best experience working with the codebase
+
 ### client
 
 the client `client/tsconfig.json` has aliases set up for importing:
 
-- `styles/*`: any CSS in the `client/styles/` dir
-- `contracts/*`: any contract ABI in `solidity/artifacts/contracts/<ContractName.sol>/<ContractName>.json`
+- `@styles/*`: any CSS in the `client/styles/` dir
+- `@contracts/*`: any contract ABI in `solidity/artifacts/contracts/<ContractName.sol>/<ContractName>.json`
 
 > example
 
 ```ts
 // global
-import "styles/globals.css";
+import "@styles/globals.css";
 // CSS module
-import styles from "styles/Home.module.css";
+import styles from "@styles/Home.module.css";
 // contract ABI
-import GreeterABI from "contracts/Greeter.sol/Greeter.json";
+import GreeterABI from "@contracts/Greeter.sol/Greeter.json";
 ```
 
 
