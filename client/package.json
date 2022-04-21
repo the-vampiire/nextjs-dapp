@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier-eslint \"src/**/*.ts\" --list-different"
+    "lint": "prettier-eslint \"src/**/*.@(ts|tsx)\" --list-different",
+    "fix": "prettier-eslint \"src/**/*.@(ts|tsx)\" --write"
   },
   "dependencies": {
     "next": "12.1.5",

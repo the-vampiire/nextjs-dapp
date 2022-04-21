@@ -7,14 +7,12 @@ module.exports = {
   },
   env: {
     es6: true,
-    jest: true,
   },
   ignorePatterns: [
     "node_modules",
     "build",
     "coverage",
     ".eslintrc.js",
-    "jest.config.js",
     "next.config.js",
   ],
   plugins: [
@@ -36,6 +34,7 @@ module.exports = {
     WebAssembly: true,
   },
   rules: {
+    "@next/next/no-html-link-for-pages": ["error", "src/pages"],
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "no-unused-vars": "off",
