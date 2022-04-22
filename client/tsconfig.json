@@ -7,6 +7,12 @@
       ],
       "@contracts/*": [
         "../solidity/artifacts/contracts/*"
+      ],
+      "@contracts/types/*": [
+        "../solidity/typechain/*"
+      ],
+      "@contracts/deployments/*": [
+        "../solidity/deployments/*"
       ]
     },
     "target": "es5",
