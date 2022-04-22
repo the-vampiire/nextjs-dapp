@@ -1,29 +1,25 @@
-// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-//
-// When running the script with `npx hardhat run <script>` you'll find the Hardhat
-// Runtime Environment's members available in the global scope.
+import "dotenv/config";
 import { ethers } from "hardhat";
+import recordDeployment from "./record-deployment";
+
+const deployContract = async (contractName: string) => {
+  const ContractFactory = await ethers.getContractFactory(contractName);
+  const contract = await ContractFactory.deploy();
+
+  await contract.deployed();
+
+  const deploymentRecord = await recordDeployment(contractName, contract);
+  console.log(`${contractName} deployed:`, deploymentRecord);
+};
 
 async function main() {
-  // Hardhat always runs the compile task when running scripts with its command
-  // line interface.
-  //
-  // If this script is run directly using `node` you may want to call compile
-  // manually to make sure everything is compiled
-  // await hre.run('compile');
+  // set the contract name(s) in here
+  // NOTE: must match the <name>.sol file, ex: for Greeter.sol contractName = "Greeter"
+  const contractNames = ["Greeter"];
 
-  // We get the contract to deploy
-  const Greeter = await ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
-
-  await greeter.deployed();
-
-  console.log("Greeter deployed to:", greeter.address);
+  await Promise.all(contractNames.map(deployContract));
 }
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
