@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "hardhat compile"
+    "node": "hardhat node",
+    "test": "hardhat test",
+    "build": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.ts --network localhost"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +16,12 @@
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.5.0",
     "@typechain/ethers-v5": "^7.2.0",
     "@typechain/hardhat": "^2.3.1",
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.0",
-    "@types/node": "^12.20.48",
+    "@types/node": "^16.11.7",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "chai": "^4.3.6",
