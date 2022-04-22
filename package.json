@@ -5,7 +5,7 @@
   "scripts": {
     "install": "npm run client -- install && npm run solidity -- install",
     "build": "npm run solidity:build && npm run client:build",
-    "predev": "npm run solidity:build",
+    "predev": "npm run solidity:deploy",
     "dev": "npm run solidity:build && npm run client:dev",
     "client": "npm --prefix ./client",
     "client:": "npm run client -- run",
@@ -13,7 +13,8 @@
     "client:dev": "npm run client: -- dev",
     "solidity": "npm --prefix ./solidity",
     "solidity:": "npm run solidity -- run",
-    "solidity:build": "npm run solidity: -- build"
+    "solidity:build": "npm run solidity: -- build",
+    "solidity:deploy": "npm run solidity: -- deploy"
   },
   "keywords": [],
   "author": "the-vampiire",
